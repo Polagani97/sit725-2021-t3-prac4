@@ -17,8 +17,8 @@
   <link href="timeline.css" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="simple-line-icons.css">
 
   <!-- Add icon library -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -51,6 +51,7 @@
           <div class="col s12">
             <img class="profile-image rounded-circle" src="myself.jpg.jpg" alt="">
             <h1 class="name">Priyanka Polagani</h1>
+      
             <div class="title italic"><h3>Pursuing masters in Information Technology</h3></div>
             <div class="profile">
               <a href="https://www.linkedin.com/in/priyanka-polagani-022b32169/" target="_blank">
@@ -177,16 +178,51 @@
         </div>
       </div>
     </section>
+    
+    <section id="comment-section">
+      <div class="container">
+        <h5>Comment Section</h5>
+        <div class="row">
+          <div class="input-field col s12">
+            <input value="" id="name" type="text" class="validate">
+            <label class="name" for="name">Name</label>
+          </div>
+        
+          <div class="input-field col s12">
+            <input value="" id="description" type="text" class="validate">
+            <label class="description" for="description">Description</label>
+          </div>
+        </div>
+      </div>
+      <div class="row center" style="padding-top:50px;">
+        <a onclick="newComment()" href="#!" class="waves-effect waves-light btn-large">Submit</a>
+      </div>
+      <div class="container">
+        <div class="row" id="listComments">
+  
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="text-muted">
     <div class="container">
-      <p>
+      <p class="right">
         <a href="#">Back to top</a>
       </p>
       <p>&copy; Priyanka</p>
     </div>
   </footer>
-            
+  
+  <!-- socket IO Served by the server -->
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="env.js"></script>
+        
 </body>
 </html>
